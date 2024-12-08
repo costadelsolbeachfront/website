@@ -10,6 +10,69 @@ body {
     color: #333;
 }
 
+/* Section About */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn-tarifs {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #a37b51;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-tarifs:hover {
+    background-color: #8a6843; /* Slightly darker hover effect */
+}
+
+/* Style spécifique à l'image de la section À propos */
+.about-img-specific {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Cropping uniquement pour cette image */
+}
+
+/* Supprimez ou ajustez toute règle globale potentiellement problématique */
+img {
+    object-fit: unset; /* Annule tout cropping global s'il y en avait */
+    max-width: 100%; /* Conserve les proportions originales des images */
+    height: auto; /* Ajuste la hauteur automatiquement */
+}
+
+
 /* Section de bienvenue */
 .welcome-section {
     display: flex;
@@ -47,7 +110,7 @@ body {
 
 /* Parallax Image Background */
 .image-background {
-    background-image: url('vuepiscinelarge.jpg');
+    background-image: url('port.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Parallax effect */
@@ -84,44 +147,7 @@ body {
     font-weight: bold;
 }
 
-/* Section À propos */
-.about-section {
-    display: flex;
-    align-items: center;
-    padding: 40px;
-    background-color: #f9f9f9;
-}
 
-.about-text {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.btn-contact {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #a37b51;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.about-image img {
-    max-width: 100%;
-    border-radius: 10px;
-}
 
 .section {
     max-width: 800px;
@@ -199,48 +225,54 @@ body {
     font-weight: bold;
 }
 
-/* Galerie */
+/* Section Galerie */
 .gallery-section {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 20px;
+    padding: 40px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
-.gallery-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+.gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
     color: #333;
-    margin-bottom: 10px;
 }
 
-.gallery-section p {
-    font-size: 1.2rem;
-    color: #555;
+.gallery-category {
     margin-bottom: 40px;
 }
 
+.gallery-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+
+
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
 }
 
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.gallery-grid a {
+    display: block;
 }
 
-.gallery-item img {
+.gallery-grid img {
     width: 100%;
+    max-width: 200px;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
+.gallery-grid img:hover {
+    transform: scale(1.05);
 }
 
 /* Section Appartement */
@@ -306,4 +338,306 @@ footer {
     text-align: center;
     background-color: #333;
     color: #fff;
+}
+
+
+/* Section Tarifs */
+.tarifs-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarifs-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tarifs-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tarifs-section th, .tarifs-section td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.tarifs-section th {
+    background-color: #a37b51;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tarifs-section td {
+    background-color: #fff;
+}
+
+.tarifs-section tfoot td {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light background to distinguish the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.map-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 800px; /* Limit the maximum width of the map */
+    height: 450px;
+    border: none; /* Remove border */
+    border-radius: 8px; /* Match the container's rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow around the map */
+}
+
+
+/* Section About */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn-contact {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a37b51;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #8a6843; /* Darker shade for hover effect */
+}
+
+
+/* Section Apartment Highlight */
+.apartment-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+}
+
+.apartment-image {
+    flex: 1;
+    margin-right: 20px; /* Space between image and text */
+    text-align: center;
+}
+
+.apartment-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apartment-text {
+    flex: 1;
+}
+
+.apartment-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.apartment-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn-details {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a37b51;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-details:hover {
+    background-color: #8a6843; /* Slightly darker hover color */
+}
+
+
+/* Section Appartement */
+.apartment-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.apartment-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.apartment-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.apartment-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.apartment-description {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.apartment-description p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.apartment-images {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.apartment-images img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Bouton Consultez la Galerie */
+.btn-gallery {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #a37b51;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-gallery:hover {
+    background-color: #8a6843; /* Slightly darker hover effect */
+}
+
+
+/* Section Tarifs */
+.tarifs-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tarifs-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tarifs-section th,
+.tarifs-section td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tarifs-section th {
+    background-color: #a37b51;
+    color: white;
+}
+
+.additional-info {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.additional-info p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
 }
