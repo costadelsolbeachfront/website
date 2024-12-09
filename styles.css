@@ -641,3 +641,121 @@ footer {
     color: #333;
     margin: 10px 0;
 }
+
+
+/* Section Alentours */
+.surroundings-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.surroundings-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.surroundings-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.surroundings-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.surroundings-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.surroundings-section ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.rules-section {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.rules-section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.rules-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rules-section ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.rules-section ul li::before {
+    content: "✔";
+    color: #333;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.rules-section p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.rules-section strong {
+    color: #333;
+}
+
+.localisation-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+.localisation-section h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.localisation-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.localisation-section strong {
+    color: #000;
+    font-weight: bold;
+}
